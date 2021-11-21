@@ -2,3 +2,6 @@
 %project=flipr
 %uri=https://github.com/sqitchers/sqitch-intro/
 
+
+appschema 2021-11-21T19:39:35Z Nadira Arasya <nadiraarasya@gmail.com> # Initialize account schema
+account [appschema] 2021-11-21T19:42:13Z Nadira Arasya <nadiraarasya@gmail.com> # Creates table account to store users data
