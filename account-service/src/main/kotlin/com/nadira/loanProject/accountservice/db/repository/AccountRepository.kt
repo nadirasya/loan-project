@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface AccountRepository : JpaRepository<Account?, Long?> {
-    fun getFirstByEmail(Email: String?): Account?
+    fun getFirstByEmail(Email: String?): Account?;
 }
