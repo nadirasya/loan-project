@@ -20,5 +20,5 @@ data class Account (
     val isActive: Boolean? = null,
 ) {
     @OneToMany(cascade = [(CascadeType.ALL)], fetch = FetchType.LAZY, mappedBy = "account")
-    private val loans = mutableListOf<LoanItem>()
+    private val loans = mutableListOf<Loan>()
 }
