@@ -1,10 +1,7 @@
 package com.nadira.loanProject.accountservice.db.entity
 
 //import lombok.Data
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.Id
+import javax.persistence.*
 
 //@Data
 @Entity
@@ -20,5 +17,8 @@ data class Account (
     val password: String? = null,
 
     @Column(nullable = false)
-    val isActive: Boolean? = null
-)
+    val isActive: Boolean? = null,
+) {
+    @OneToMany(cascade = [(CascadeType.ALL)], fetch = FetchType.LAZY, mappedBy = "account")
+    private val loans = mutableListOf<LoanItem>()
+}
