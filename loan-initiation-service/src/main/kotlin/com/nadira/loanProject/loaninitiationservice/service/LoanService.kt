@@ -25,6 +25,7 @@ class LoanService @Autowired constructor(
     fun addNewLoan(addLoanDto: AddLoanDto): ResponseEntity<*>?{
         val account: Account = accountClient.getUserById(addLoanDto.account);
         if(account == null) return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User account not found.")
+        if(account.isActive == false) return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User can't apply for this loan.")
         val loan = Loan(account=account, nominal = addLoanDto.nominal, dueDate = addLoanDto.dueDate)
         tempLoanRepository.save(loan);
         loanRepository.save(loan);

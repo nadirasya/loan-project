@@ -1,5 +1,6 @@
 package com.nadira.loanProject.loaninitiationservice.db.entity
 
+import com.fasterxml.jackson.annotation.JsonFormat
 import java.util.*
 import javax.persistence.*
 
@@ -17,8 +18,10 @@ data class Loan (
         val nominal: Int? = null,
 
         @Column(nullable = false)
+        @JsonFormat(pattern = "yyyy/MM/dd")
         val dueDate: Date? = null,
 
         @Column
+        @JsonFormat(pattern = "yyyy/MM/dd")
         val paidDate: Date? = null
 )

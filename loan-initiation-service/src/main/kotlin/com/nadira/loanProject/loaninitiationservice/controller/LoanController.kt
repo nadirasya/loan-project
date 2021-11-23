@@ -28,7 +28,7 @@ class LoanController @Autowired constructor(private val loanService: LoanService
 
     @GetMapping("/loan")
     @ResponseStatus(HttpStatus.OK)
-    fun addNewLoan(): MutableList<Loan?> {
+    fun getAllLoan(): MutableList<Loan?> {
         return loanService.getAllLoan()
     }
 
