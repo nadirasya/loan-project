@@ -11,6 +11,7 @@ This application is currently developed using:
 - Kotlin
 - Sqitch
 - Postgres
+- Redis
 - AWS (soon to be deployed)
 
 # Account Service 
