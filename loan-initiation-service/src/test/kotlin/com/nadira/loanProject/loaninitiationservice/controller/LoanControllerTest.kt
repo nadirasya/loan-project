@@ -95,7 +95,4 @@ internal class LoanControllerTest @Autowired constructor(
         }
     }
 
-    @Test
-    fun getAllLoan() {
-    }
 }

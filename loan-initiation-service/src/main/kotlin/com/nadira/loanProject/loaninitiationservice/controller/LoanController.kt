@@ -32,5 +32,11 @@ class LoanController @Autowired constructor(private val loanService: LoanService
         return loanService.getAllLoan()
     }
 
+    @GetMapping("/loan/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    fun getLoanById(@PathVariable id: Long): Optional<Loan?> {
+        return loanService.getLoanById(id)
+    }
+
 
 }
